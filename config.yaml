@@ -1,0 +1,18 @@
+access_key: [Set anything you want. It should be hard to guess]
+script_path: /app/tabata.sh
+presets:
+  gentle:
+    work: 40
+    rest: 20
+    rounds: 10
+    prepare: 30
+  standard:
+    work: 40
+    rest: 20
+    rounds: 20
+    prepare: 30
+  brutal:
+    work: 40
+    rest: 20
+    rounds: 30
+    prepare: 30

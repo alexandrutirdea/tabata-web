@@ -1,0 +1,7 @@
+services:
+  tabata:
+    image: tabata:latest
+    container_name: tabata
+    restart: unless-stopped
+    ports:
+      - "5011:5011"
