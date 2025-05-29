@@ -1,0 +1,20 @@
+kind: pipeline
+type: docker
+name: deploy
+
+steps:
+  - name: build-and-deploy
+    image: docker
+    volumes:
+      - name: dockersock
+        path: /var/run/docker.sock
+    commands:
+      - docker build -t tabata .
+      - docker stop tabata || true
+      - docker rm tabata || true
+      - docker-compose up -d
+
+volumes:
+  - name: dockersock
+    host:
+      path: /var/run/docker.sock
